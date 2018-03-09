@@ -17,7 +17,6 @@ func GetRouter() *gin.Engine {
 
 	r.LoadHTMLGlob("view/*")
 	r.NoRoute(func(c *gin.Context) {
-
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
