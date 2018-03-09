@@ -19,5 +19,6 @@ func GetRouter() *gin.Engine {
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
+
 	return r
 }
