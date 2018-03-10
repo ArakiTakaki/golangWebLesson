@@ -6,14 +6,13 @@ WEB環境開発の実演を行なっております。
 
 ## クライアント
  - React.js
- - 
 
 ## サーバーサイド
  - GO lang (1.10.0)
  - DOCS
-  - gin
-  - go-cache
-  - gorm
+     - gin
+     - go-cache
+     - gorm
 
 ## データベース
  - RDS ( sqlite3 3.19.3 )
