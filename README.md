@@ -6,6 +6,8 @@ WEB環境開発の実演を行なっております。
 [Hal Event Week - konojunya様](https://github.com/konojunya/HEW2018)  
 がライブコーディングを開催しており、影響を受けて作成しようと思いました。
 
+Windowsからの投下テスト
+
 ### クライアント
  - React.js
 
