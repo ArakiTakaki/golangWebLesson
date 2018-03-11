@@ -6,5 +6,5 @@ import (
 
 // Index インデックスの処理系統を記載する。
 func Index(c *gin.Context) {
-	c.HTML(200, "index.html", nil)
+	c.HTML(200, "root/index.tmpl", nil)
 }

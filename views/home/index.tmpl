@@ -1,3 +1,4 @@
+{{ define "home/index.tmpl" }}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,14 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="application/javascript;version=1.7"></script>
-    <script src="http://fb.me/react-0.13.3.js"></script>
-    <script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://fb.me/react-0.14.0.js"></script>
+    <script src="https://fb.me/react-dom-0.14.0.js"></script>
+
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
     <script src="/js/main.js"></script>
 </head>
 <body>
-
     <div id="app"></div>
     <div id="aiueo"></div>
     <h1>home</h1>
@@ -23,3 +25,4 @@
     <script type="text/jsx" src="/jsx/master.jsx"></script>
 </body>
 </html>
+{{ end }}

@@ -16,9 +16,9 @@ func GetRouter() *gin.Engine {
 
 	//r.LoadHTMLGlob("views/*") 動作しない - 当たり前ではあるが
 	r.LoadHTMLGlob("views/**/*")
-	//router.LoadHTMLFiles("templates/template1.html","templates/template2.html") // ファイル指定でロード
 	rootSet(r.Group(""))
 	homeSet(r.Group("/home"))
+	apiSet(r.Group("/api"))
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(400, "404.html", nil)
 	})

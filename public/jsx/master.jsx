@@ -1,14 +1,20 @@
-class ShoppingList extends React.Component {
-    render() {
-      return (
-        <div className="shopping-list">
-          <h1>Shopping List for {this.props.name}</h1>
-          <ul>
-            <li>Instagram</li>
-            <li>WhatsApp</li>
-            <li>Oculus</li>
-          </ul>
-        </div>
-      );
-    }
-  }
+
+// ItemDetailのコンポーネント定義
+// const ItemDetail = props => {
+//     const item = props.item;
+//     return <li className={'item' + item.stock === 0 ? ' soldout' : ''}>
+//         <div className="item-name">{item.name}</div>
+//         <div className="item-price">{item.price}</div>
+//     </li>;
+// };
+
+// fetch('/js/test.json').then(res => res.json()).then(data => {
+//     ReactDOM.render(
+//         <ItemList items={data.items} />, // これを
+//         document.getElementById('container') // ここにレンダリングしろ
+//     );
+// });
+ReactDOM.render(
+    <div>レンダーテスト</div>,
+    document.getElementById("test")
+)
