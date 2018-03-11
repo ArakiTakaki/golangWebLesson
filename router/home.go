@@ -1,17 +1,15 @@
 package router
 
 import (
-	"net/http"
+	"github.com/ArakiTakaki/golangWebLesson/controllers/home"
 
 	"github.com/gin-gonic/gin"
 )
 
 func homeSet(r *gin.RouterGroup) {
 	// /home/index.html に飛ぶ様に設定されている。（飛ばす場所）
-	r.GET("/index.html", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "/index.html", nil)
-	})
-	//home.Index
+	r.GET("/", home.Index)
+	r.GET("/index.html", home.Index)
 
 }
 

@@ -1,8 +1,6 @@
 package router
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,22 +14,14 @@ func GetRouter() *gin.Engine {
 	r.Static("/image", "./public/image")
 	r.Static("/jsx", "./public/jsx")
 
+	//r.LoadHTMLGlob("views/*") 動作しない - 当たり前ではあるが
 	r.LoadHTMLGlob("views/**/*")
-
+	//router.LoadHTMLFiles("templates/template1.html","templates/template2.html") // ファイル指定でロード
+	rootSet(r.Group(""))
+	homeSet(r.Group("/home"))
 	r.NoRoute(func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", nil)
+		c.HTML(400, "404.html", nil)
 	})
-
-	r.GET("/root/index.html", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "root/index.html", nil)
-	})
-	r.GET("/home/index.html", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "home/index.html", nil)
-	})
-	// ルーティングurlを増やす部分
-	//rootSet(r.Group(""))
-	//homeSet(r.Group("/home"))
-	// ルーティングurlを増やす部分
 
 	return r
 }

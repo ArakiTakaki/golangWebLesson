@@ -7,6 +7,7 @@ import (
 
 func rootSet(r *gin.RouterGroup) {
 	// /home/index.html に飛ぶ様に設定されている。（飛ばす場所）
-	r.GET("/test.html", root.Index)
+	r.GET("/", root.Index)
+	r.GET("/index.html", root.Index)
 
 }
