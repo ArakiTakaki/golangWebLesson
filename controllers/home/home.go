@@ -1,4 +1,4 @@
-package controllers
+package home
 
 import (
 	"net/http"
@@ -9,5 +9,5 @@ import (
 // Index インデックスの処理系統を記載する。
 func Index(c *gin.Context) {
 	//ディレクトリを選択するけれど、なるべく１回書くだけで済ませたいところ。
-	c.HTML(http.StatusOK, "/home/index.html", nil)
+	c.HTML(http.StatusOK, "index_home.html", nil)
 }

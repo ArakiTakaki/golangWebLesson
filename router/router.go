@@ -16,15 +16,16 @@ func GetRouter() *gin.Engine {
 	r.Static("/image", "./public/image")
 	r.Static("/jsx", "./public/jsx")
 
-	// ルーティングurlを増やす部分
-	var home = r.Group("/home")
-	homeSet(home)
-	// ルーティングurlを増やす部分
+	r.LoadHTMLGlob("views/**/*.html")
 
-	r.LoadHTMLGlob("views/root/*")
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
+
+	// ルーティングurlを増やす部分
+	rootSet(r.Group(""))
+	homeSet(r.Group("/home"))
+	// ルーティングurlを増やす部分
 
 	return r
 }
