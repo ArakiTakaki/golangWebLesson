@@ -1,12 +1,14 @@
-# GO言語レッスン
+# GO言語レッスン [ Share Notes ]
 
-## 開発環境
+MarkDown系のWebアプリケーション開発
+ログイン機能実装できたら万々歳だけど・・・。
 
 WEB環境開発の実演を行なっております。  
 [Hal Event Week - konojunya様](https://github.com/konojunya/HEW2018)  
 がライブコーディングを開催しており、影響を受けて作成しようと思いました。
 
-Windowsからの投下テスト
+## 開発環境
+
 
 ### クライアント
  - React.js
