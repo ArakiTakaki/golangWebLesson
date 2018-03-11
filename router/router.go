@@ -17,10 +17,11 @@ func GetRouter() *gin.Engine {
 	r.Static("/jsx", "./public/jsx")
 
 	// ルーティングurlを増やす部分
-	homeSet(r.Group("/home"))
+	var home = r.Group("/home")
+	homeSet(home)
 	// ルーティングurlを増やす部分
 
-	r.LoadHTMLGlob("views/*")
+	r.LoadHTMLGlob("views/root/*")
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})

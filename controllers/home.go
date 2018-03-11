@@ -6,6 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Ctl(c *gin.Context) {
-	c.HTML(http.StatusOK, "test.html", nil)
+// Index インデックスの処理系統を記載する。
+func Index(c *gin.Context) {
+	//ディレクトリを選択するけれど、なるべく１回書くだけで済ませたいところ。
+	c.HTML(http.StatusOK, "/home/index.html", nil)
 }
