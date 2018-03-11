@@ -14,7 +14,8 @@
 //         document.getElementById('container') // ここにレンダリングしろ
 //     );
 // });
+
 ReactDOM.render(
-    <div>レンダーテスト</div>,
-    document.getElementById("test")
-)
+    <h1>Hello, world!</h1>,
+    document.getElementById('root')
+  );

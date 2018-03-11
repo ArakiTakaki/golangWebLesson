@@ -10,18 +10,28 @@
 
     <script type="application/javascript;version=1.7"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
-    <script src="https://fb.me/react-0.14.0.js"></script>
-    <script src="https://fb.me/react-dom-0.14.0.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
     <script src="/js/main.js"></script>
 </head>
 <body>
+
+    <div id="root"></div>
     <h1>test</h1>
     <a href="/home/index.html">home</a>
     <div id="test"></div>
-    <script type="text/jsx" src="/jsx/master.jsx"></script>
+    <script type="text/babel">
+
+        ReactDOM.render(
+          <h1>Hello, world!</h1>,
+          document.getElementById('root')
+        );
+  
+      </script>
+    <script type="text/babel" src="/jsx/master.jsx"></script>
 </body>
 </html>
 {{ end }}
