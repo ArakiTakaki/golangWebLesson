@@ -9,9 +9,10 @@ import (
 func homeSet(r *gin.RouterGroup) {
 	// /home/index.html に飛ぶ様に設定されている。（飛ばす場所）
 	r.GET("/index.html", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", nil)
+		c.HTML(http.StatusOK, "/index.html", nil)
 	})
 	//home.Index
+
 }
 
 /*
