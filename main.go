@@ -1,6 +1,6 @@
 package main
 
-import "./router"
+import "github.com/ArakiTakaki/golangWebLesson/router"
 
 func main() {
 
