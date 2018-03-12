@@ -11,7 +11,8 @@ WEB環境開発の実演を行なっております。
 
 
 ### クライアント
- - React.js
+ - React
+ - Material
 
 ### サーバーサイド
  - GO lang (1.10.0)
