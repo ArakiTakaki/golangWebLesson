@@ -1,0 +1,131 @@
+*{
+    font-size: 13px;
+    letter-spacing: .2em;
+    color: #333;
+}
+a{
+    text-decoration: none;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin: .5em;
+    letter-spacing: 0;
+}
+h2{
+    font-size: 1.5em;
+    margin-left: 20px;
+    margin-top: 1em;
+}
+
+h3{
+    font-size: 1.3em;
+    margin-top: .8em;
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p{
+    margin-top: .8em;
+    margin-left: 30px;
+    text-indent: 1em;
+    line-height: 1.8em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ul li{
+    margin-top: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20px;
+}
+
+/* 基本設定 */
+
+
+/* NAV */
+#left-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#nav-button{
+    display: none;
+}
+#nav-button + label{
+    position: fixed;
+    display: block;
+    top: 10px;
+    left: 10px;
+    z-index: 100;    
+}
+
+
+#nav-button:checked + label{
+    color: blue;
+}
+
+#left-nav>section{
+    position: fixed;
+    padding-top: 50px;
+    padding-right: 20px; 
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 50;
+}
+#left-nav>input:checked ~ section{
+    animation-name: nav-view;
+    animation-duration: .4s;
+    animation-delay: .1s;
+    animation-fill-mode: forwards;
+    display: block;
+    opacity: 0;
+    background-color:rgba(10, 10, 10, 0.8);
+    height: 100%;
+}
+#left-nav>section>ul>li>a{
+    color: papayawhip;
+}
+#left-nav>section>ul>li>a:hover{
+    animation-name: link-hover;
+    animation-duration: .2s;
+    animation-delay: .1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes link-hover{
+    0%{
+        color: rgb(230, 218, 215);
+    }
+    100%{
+        color: rgb(255, 117, 186);
+    }
+}
+@keyframes nav-view{
+    0%{
+        opacity: 0;
+    }
+    100%{ 
+        opacity: 1;
+    }
+}
+/* ARTICLES */
+#contents>article{
+    padding:10px;
+    margin-top: 10px;
+}
+#contents>article>header *{
+    float: left;
+}
+#contents>article>header>p{
+    margin-left: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#contents>article>p{
+    clear: both;
+}

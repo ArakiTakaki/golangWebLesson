@@ -5,22 +5,64 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <!-- javascript 1.7 を使用するには宣言しなければいけないらしい。 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="application/javascript;version=1.7"></script>
-    
+
+
+    <!-- javascript 1.7 を使用するには宣言しなければいけないらしい。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- REACT -->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
     <script type="text/babel" src="/js/main.js"></script>
+
 </head>
 <body>
-    <h1>test</h1>
-    <a href="/home/index.html">home</a>
-    <div id="test"></div>
+
+<header>
+    <h1>Shear Notes</h1>
+</header>
+
+<nav id="left-nav">
+    <input type="checkbox" id="nav-button">
+    <label for="nav-button">MENU</label>
+    <section>
+        <ul>
+            <li><a href="">ListItems</a></li>
+            <li><a href="">ListItems</a></li>
+        </ul>        
+    </section>
+</nav>
+
+<section id="contents">
+    <h2>コンテンツ名</h2>
+    <article>
+        <header>
+            <h3>ArticleTitle</h3>
+            <p>time</p>            
+        </header>
+        <p>コンテンツテストコンテンツテストコンテンツテスト</p>
+    </article>
+
+    <article>
+        <header>
+            <h3>ArticleTitle</h3>
+            <p>time</p>            
+        </header>
+        <p>コンテンツテストコンテンツテストコンテンツテスト</p>
+    </article>
+
+</section>
+
+</div>
+<footer>
+    
+</footer>
+
 </body>
 </html>
 {{ end }}

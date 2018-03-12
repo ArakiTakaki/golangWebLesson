@@ -12,6 +12,7 @@ func GetRouter() *gin.Engine {
 	r.Static("/js", "./public/js")
 	r.Static("/css", "./public/css")
 	r.Static("/image", "./public/image")
+	r.Static("/template", "./public/template")
 
 	//r.LoadHTMLGlob("views/*") 動作しない - 当たり前ではあるが
 	r.LoadHTMLGlob("views/**/*")
