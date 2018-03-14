@@ -1,0 +1,17 @@
+<Site>
+    <SiteTitle>Readinger</SiteTitle>
+    <Caption>リードファイル</Caption>
+    <MaxPage>5</MaxPage>
+    <Page>
+        <Url>/</Url>
+        <Name>トップページ</Name>
+    </Page>
+    <Page>
+        <Url>/home</Url>
+        <Name>ホーム</Name>
+    </Page>
+    <Page>
+        <Url>/contents</Url>
+        <Name>コンテンツ</Name>
+    </Page>
+</Site>
