@@ -24,9 +24,10 @@ func GetMeta() {
 	const BUFSIZE = 1024
 	file, err := ioutil.ReadFile(`./conf/conf.xml`)
 	Error(err, "ファイルのオープンエラー:context.go")
-	var pages Page
-	xml.Unmarshal(file, &pages)
-	fmt.Printf("%+v", pages)
+	var site Site
+	xml.Unmarshal(file, &site)
+	fmt.Printf("%+v", site)
+	fmt.Printf("\n")
 }
 
 func Error(err error, errCode string) {
