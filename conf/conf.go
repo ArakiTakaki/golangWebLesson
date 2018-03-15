@@ -16,23 +16,20 @@ type Site struct {
 
 // Page URLと名前のマップ
 type Page struct {
-	Url  string
+	URL  string
 	Name string
 }
 
-func GetMeta() {
-	const BUFSIZE = 1024
+// GetMeta サイトの情報を返却する。
+func GetMeta() Site {
 	file, err := ioutil.ReadFile(`./conf/conf.xml`)
-	Error(err, "ファイルのオープンエラー:context.go")
+	if err != nil {
+		panic(err)
+	}
 	var site Site
 	xml.Unmarshal(file, &site)
 	fmt.Printf("%+v", site)
 	fmt.Printf("\n")
-}
 
-func Error(err error, errCode string) {
-	if err != nil {
-		fmt.Println(errCode)
-		panic(err)
-	}
+	return site
 }

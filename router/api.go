@@ -7,6 +7,6 @@ import (
 
 func apiSet(r *gin.RouterGroup) {
 	// /home/index.html に飛ぶ様に設定されている。（飛ばす場所）
-	r.GET("/items", api.Items)
-
+	r.GET("/items", api.NavItems)
+	r.GET("/meta", api.PageData)
 }

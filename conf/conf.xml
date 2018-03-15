@@ -1,17 +1,17 @@
 <Site>
-    <SiteTitle>Readinger</SiteTitle>
-    <Caption>リードファイル</Caption>
+    <SiteTitle>Share Notes</SiteTitle>
+    <Caption>自分のノートを作ろう！</Caption>
     <MaxPage>5</MaxPage>
     <Page>
-        <Url>/</Url>
+        <URL>/</URL>
         <Name>トップページ</Name>
     </Page>
     <Page>
-        <Url>/home</Url>
+        <URL>/home</URL>
         <Name>ホーム</Name>
     </Page>
     <Page>
-        <Url>/contents</Url>
+        <URL>/contents</URL>
         <Name>コンテンツ</Name>
     </Page>
 </Site>
