@@ -5,13 +5,16 @@
     <Page>
         <URL>/</URL>
         <Name>トップページ</Name>
+        <Key>1</Key>
     </Page>
     <Page>
         <URL>/home</URL>
         <Name>ホーム</Name>
+        <Key>2</Key>
     </Page>
     <Page>
         <URL>/contents</URL>
         <Name>コンテンツ</Name>
+        <Key>3</Key>
     </Page>
 </Site>

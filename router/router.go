@@ -1,12 +1,14 @@
 package router
 
 import (
+	context "github.com/ArakiTakaki/Context"
 	"github.com/gin-gonic/gin"
 )
 
 // GetRouter ルーターの設定をして、gin.Engineを返す
 func GetRouter() *gin.Engine {
 	var r = gin.Default()
+	context.New()
 
 	// 静的ファイルを配置する場所選択
 	r.Static("/js", "./public/js")

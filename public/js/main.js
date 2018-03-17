@@ -2,15 +2,17 @@
 
 
 var NavItems = props => {
-    var item = props.items
-    // 先にループ処理をさせておいてから使う
-    var list = [];
-    for(var i in item){
-        list.push(<li><a href={item[i].URL}>{item[i].Name}</a></li>);
-    }
+    const items = props.items
+
+    // アローを使ってfor文的なの書く
+    const listItems = items.map((item) =>
+        <li key={item.Key.toString()}>
+            <a href={item.URL}>{item.Name}</a>
+        </li>
+    );
     // 先にループ処理をさせておいてから使う
     return <ul>
-        {list}
+        {listItems}
     </ul>
 }
 
@@ -18,7 +20,7 @@ fetch(`/api/meta`,{method: 'get'}).then(res => res.json()).then(data => {
     ReactDOM.render(
         <div id="left-nav">
             <input type="checkbox" id="nav-button" />
-            <label for="nav-button">MENU</label>
+            <label htmlFor="nav-button">MENU</label>
             <section>
                     <NavItems items={data.Page} />        
             </section>

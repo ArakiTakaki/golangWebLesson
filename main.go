@@ -1,6 +1,8 @@
 package main
 
-import "github.com/ArakiTakaki/golangWebLesson/router"
+import (
+	"github.com/ArakiTakaki/golangWebLesson/router"
+)
 
 func main() {
 
@@ -8,6 +10,16 @@ func main() {
 	// ルーターの設定は一度しか読み込まれないっぽい？
 	r.Run(":8000")
 
+	/*
+		これだったら動く
+		r := gin.Default()
+		test := conf.GetMeta()
+		fmt.Println(test)
+		r.GET("/api", func(c *gin.Context) {
+			c.JSON(http.StatusOK, test)
+		})
+		r.Run(":8000")
+	*/
 }
 
 /*

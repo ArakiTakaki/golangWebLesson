@@ -5,29 +5,42 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <!-- javascript 1.7 を使用するには宣言しなければいけないらしい。 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <script type="application/javascript;version=1.7"></script>
-
-    <!-- javascript 1.7 を使用するには宣言しなければいけないらしい。 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
     <!-- REACT -->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-  
+
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
     <script type="text/babel" src="/js/main.js"></script>
-    
+    <script type="text/babel" src="/js/content/editor.js"></script>
+    <script src="/js/tmp/marked.min.js"></script>
+
 </head>
 <body>
-    <div id="app"></div>
-    <div id="aiueo"></div>
-    <h1>home</h1>
-    <a href="/index.html">home</a>
-    <script type="text/jsx" src="/jsx/master.jsx"></script>
+
+<header>
+    <h1>Shear Notes</h1>
+</header>
+
+<nav id="nav">
+</nav>
+
+<div id="content"></div>
+
+<div>
+    <input type="text" id="markdown-title-in" cols="30" onkeyup="markdowner()"><br>
+    <textarea name="" id="markdown-content-in" cols="30" rows="10" onkeyup="markdowner()"></textarea>
+</div>
+
+<section id="markdown">
+
+</section>
+
+
 </body>
 </html>
 {{ end }}

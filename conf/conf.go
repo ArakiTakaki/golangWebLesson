@@ -2,8 +2,9 @@ package conf
 
 import (
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
+
+	"github.com/ArakiTakaki/Context"
 )
 
 // Site Pageを取得
@@ -18,18 +19,26 @@ type Site struct {
 type Page struct {
 	URL  string
 	Name string
+	Key int
 }
 
 // GetMeta サイトの情報を返却する。
 func GetMeta() Site {
+	data, flag := context.Get("meta")
+	if !flag {
+		return ResetMeta()
+	}
+	return data.(Site)
+}
+
+// ResetMeta メタデータのセットし直し
+func ResetMeta() Site {
 	file, err := ioutil.ReadFile(`./conf/conf.xml`)
 	if err != nil {
 		panic(err)
 	}
 	var site Site
 	xml.Unmarshal(file, &site)
-	fmt.Printf("%+v", site)
-	fmt.Printf("\n")
-
+	context.Put("meta", site)
 	return site
 }
