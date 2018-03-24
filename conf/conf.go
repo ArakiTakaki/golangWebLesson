@@ -19,13 +19,13 @@ type Site struct {
 type Page struct {
 	URL  string
 	Name string
-	Key int
+	Key  int
 }
 
 // GetMeta サイトの情報を返却する。
 func GetMeta() Site {
-	data, flag := context.Get("meta")
-	if !flag {
+	data, err := context.Get("meta")
+	if err != nil {
 		return ResetMeta()
 	}
 	return data.(Site)
